@@ -41,7 +41,7 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About me</h1>
-                <p>I am a dedicated cybersecurity professional with training in ethical hacking and offensive cybersecurity. My recent completion of a comprehensive program in cybersecurity has equipped me with an understanding of network security, penetration testing, vulnerability assessment, and threat analysis.</p>
+                <p>I am a dedicated cybersecurity professional with training in security engineering. My recent completion of a comprehensive program in cybersecurity has equipped me with an understanding of network security, penetration testing, vulnerability assessment, and threat analysis.</p>
                 <br>
                 <p>I am committed to continuous learning and staying ahead of emerging cyber threats. My goal is to leverage my technical expertise and analytical thinking to contribute to the protection of organizations and their assets from sophisticated cyber attacks.</p>
 
@@ -52,7 +52,7 @@
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>Cyber Security</span><br>Securing digital assets.<br>Red Teaming</li>
+                        <li><span>Cyber Security</span><br>Securing digital assets.</li>
                         <li><span>Full stack Web Development</span><br>Web Development</li>
                       
                     </ul>
@@ -233,8 +233,35 @@
                 <p>Used tools like SET (Social Engineering Toolkit) for phishing simulations and awareness training.</p>
                 
             </div>
+
+            <!-- Hidden Challenges (will be shown on click) -->
+            <div class="challenge-item hidden">
+                <i class="fa-solid fa-flask"></i>
+                <h2>Lab Challenge 4: Exploiting Application-Based Vulnerabilitie</h2>
+                <p>Exploited vulnerabilities like SQL Injection, XSS, and CSRF using Burp Suite and manual techniques.</p>
+            </div>
+            <div class="challenge-item hidden">
+                <i class="fa-solid fa-flask"></i>
+                <h2>Lab Challenge 5: Exploiting wired and wireless networks</h2>
+                <p>Performed Wi-Fi cracking (WEP/WPA),deauthentication attacks using Aircrack-ng.</p>
+            </div>
+            <div class="challenge-item hidden">
+                <i class="fa-solid fa-flask"></i>
+                <h2>Lab Challenge 6: Cloud, Mobile and IoT Security</h2>
+                <p>Managed security configurations and performed vulnerability assessments on cloud, mobile, and IoT platforms.</p>
+            </div>
+            <div class="challenge-item hidden">
+                <i class="fa-solid fa-flask"></i>
+                <h2>Lab Challenge 7: Performoing Post-Exploitation techniques</h2>
+                <p>Creating a foothold and maintaining persistence after compromising a system.</p>
+            </div>
+            <div class="challenge-item hidden">
+                <i class="fa-solid fa-flask"></i>
+                <h2>Lab Challenge 8: Reporting and documentation</h2>
+                <p>Creating a penetration testing report</p>
+            </div>
         </div>
-        <a href="#" class="btn">See More Challenges</a> 
+        <a href="javascript:void(0)" class="btn" id="see-more-btn">See More Challenges</a> 
     </div>
 </div>
 
@@ -341,6 +368,23 @@
 
 
   </script>
+  <script>
+    document.getElementById('see-more-btn').addEventListener('click', function() {
+        const hiddenItems = document.querySelectorAll('.challenge-item.hidden');
+        
+        // Show all hidden challenges one by one with a small delay for smooth effect
+        hiddenItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.remove('hidden');
+            }, index * 200); // Stagger the appearance
+        });
+
+        // Optional: Hide the button after showing all
+        if (hiddenItems.length > 0) {
+            this.style.display = 'none';
+        }
+    });
+</script>
 
 </body>
 </html>
